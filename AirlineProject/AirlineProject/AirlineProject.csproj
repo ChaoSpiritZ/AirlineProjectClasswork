@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AirlineCompany.cs" />
     <Compile Include="AirlineDAOMSSQL.cs" />
+    <Compile Include="AirlineProjectConfig.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="CountryDAOMSSQL.cs" />
     <Compile Include="Customer.cs" />
