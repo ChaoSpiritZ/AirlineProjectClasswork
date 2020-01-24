@@ -8,6 +8,6 @@ namespace AirlineProject
 {
     public static class AirlineProjectConfig
     {
-        public static string path = @"Data Source=VS17-SQL2017\SQLEXPRESS;Initial Catalog=AirlineProjectClasswork;Integrated Security=True";
+        public static string path = @"Data Source=DESKTOP-JJ6DFK2;Initial Catalog=AirlineProject;Integrated Security=True";
     }
 }

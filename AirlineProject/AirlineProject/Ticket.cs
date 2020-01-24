@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    class Ticket : IPoco
+    public class Ticket : IPoco
     {
         public long ID { get; set; }
         public long FlightId { get; set; }
@@ -46,6 +46,11 @@ namespace AirlineProject
         public override int GetHashCode()
         {
             return (int)ID;
+        }
+
+        public override string ToString()
+        {
+            return $"Ticket --- ID: {ID}, Flight ID: {FlightId}, Customer ID: {CustomerId}";
         }
     }
 }

@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9A1B9A5-DD63-434E-8B97-3D4BDF20311D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AirlineProject</RootNamespace>
-    <AssemblyName>AirlineProject</AssemblyName>
+    <ProjectGuid>{B10163EA-BD5F-47A4-B4BF-13837707D5B4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AirlineProjectStarter</RootNamespace>
+    <AssemblyName>AirlineProjectStarter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,27 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AirlineCompany.cs" />
-    <Compile Include="AirlineDAOMSSQL.cs" />
-    <Compile Include="AirlineProjectConfig.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="CountryDAOMSSQL.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerDAOMSSQL.cs" />
-    <Compile Include="FacadeBase.cs" />
-    <Compile Include="Flight.cs" />
-    <Compile Include="FlightDAOMSSQL.cs" />
-    <Compile Include="IAirlineDAO.cs" />
-    <Compile Include="IBasicDB.cs" />
-    <Compile Include="ICountryDAO.cs" />
-    <Compile Include="ICustomerDAO.cs" />
-    <Compile Include="IFlightDAO.cs" />
-    <Compile Include="IPoco.cs" />
-    <Compile Include="ITicketDAO.cs" />
-    <Compile Include="IUser.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="TicketDAOMSSQL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AirlineProject\AirlineProject.csproj">
+      <Project>{a9a1b9a5-dd63-434e-8b97-3d4bdf20311d}</Project>
+      <Name>AirlineProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
